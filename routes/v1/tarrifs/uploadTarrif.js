@@ -150,7 +150,7 @@ function dataSanitizer(chunk) {
             futureTarrif: true,
             chunk: {
                 updateOne: {
-                    filter: { product: chunk.product, vendor: chunk.vendor },
+                    filter: { product: chunk.product, vendor: chunk.vendor, startDate: chunk.startDate },
                     update: sanitized,
                     upsert: true,
                 },
